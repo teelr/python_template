@@ -1,0 +1,8 @@
+# Python cache and virtual environment files
+__pycache__/
+*.py[cod]
+env/
+venv/
+
+# Test and cache files
+.pytest_cache/
