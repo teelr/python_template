@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Create Conda Environment",
+        "type": "shell",
+        "command": "conda",
+        "args": [
+          "create",
+          "--name",
+          "${input:envName}",
+          "python=${input:pythonVersion}"
+        ],
+        "problemMatcher": [],
+        "detail": "Creates a new Conda environment with the specified name and Python version."
+      },
+      {
+        "label": "Activate Conda Environment",
+        "type": "shell",
+        "command": "powershell.exe",
+        "args": [
+          "-NoExit",
+          "-Command",
+          "conda activate ${input:envName}"
+        ],
+        "problemMatcher": [],
+        "detail": "Activates the specified Conda environment persistently in the terminal."
+      },
+      {
+        "label": "Install Dependencies",
+        "type": "shell",
+        "command": "pip",
+        "args": [
+          "install",
+          "-r",
+          "requirements.txt"
+        ],
+        "problemMatcher": [],
+        "detail": "Installs all dependencies listed in the requirements.txt file."
+      },
+    ],
+    "inputs": [
+      {
+        "id": "envName",
+        "type": "promptString",
+        "description": "Enter the name of the Conda environment",
+        "default": "myenv"
+      },
+      {
+        "id": "pythonVersion",
+        "type": "promptString",
+        "description": "Enter the Python version",
+        "default": "3.12"
+      }
+    ]
+  }  
