@@ -39,6 +39,18 @@
       ],
       "problemMatcher": [],
       "detail": "Updates the Conda environment to match the environment.yml file, removing unused dependencies."
+    },
+    {
+      "label": "Initialize and Push to GitHub",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-NoExit",
+        "-Command",
+        "git init; git add .; git commit -m '${input:commitMessage}'; git remote add origin https://github.com/${input:githubUsername}/${input:repoName}.git; git push -u origin main"
+      ],
+      "problemMatcher": [],
+      "detail": "Initializes Git, commits changes, sets the remote, and pushes the project to GitHub."
     }
   ],
   "inputs": [
@@ -46,7 +58,26 @@
       "id": "envName",
       "type": "promptString",
       "description": "Enter the name of the Conda environment",
-      "default": "myenv"
+      "default": "project_name"
+    },
+    {
+      "id": "commitMessage",
+      "type": "promptString",
+      "description": "Enter the commit message for the initial commit",
+      "default": "Initial commit"
+    },
+    {
+      "id": "githubUsername",
+      "type": "promptString",
+      "description": "Enter your GitHub username",
+      "default": "your-username"
+    },
+    {
+      "id": "repoName",
+      "type": "promptString",
+      "description": "Enter the name of the GitHub repository",
+      "default": "project_name"
     }
   ]
 }
+
