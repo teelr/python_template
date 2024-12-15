@@ -59,24 +59,6 @@
       "type": "promptString",
       "description": "Enter the name of the Conda environment",
       "default": "project_name"
-    },
-    {
-      "id": "commitMessage",
-      "type": "promptString",
-      "description": "Enter the commit message for the initial commit",
-      "default": "Initial commit"
-    },
-    {
-      "id": "githubUsername",
-      "type": "promptString",
-      "description": "Enter your GitHub username",
-      "default": "your-username"
-    },
-    {
-      "id": "repoName",
-      "type": "promptString",
-      "description": "Enter the name of the GitHub repository",
-      "default": "project_name"
     }
   ]
 }
