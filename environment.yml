@@ -1,0 +1,35 @@
+name: myenv  # Name of your Conda environment
+channels:
+  - conda-forge  # Use conda-forge for the latest package versions
+  - defaults      # Default Conda channel
+dependencies:
+  # Python version
+  - python=3.11
+
+  # Core development tools
+  - black
+  - ruff
+  - pytest
+
+  # Data manipulation and visualization
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+
+  # Utilities and web scraping
+  - requests
+  - beautifulsoup4
+
+  # Web development tools
+  - flask
+  - fastapi
+
+  # Database interaction
+  - sqlalchemy
+  - psycopg2
+
+  # pip-only dependencies
+  - pip
+  - pip:
+    - plotly  # Interactive plotting (example for pip-only packages)
