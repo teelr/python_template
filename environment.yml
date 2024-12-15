@@ -4,7 +4,7 @@ channels:
   - defaults      # Default Conda channel
 dependencies:
   # Python version
-  - python=3.11
+  - python
 
   # Core development tools
   - black
