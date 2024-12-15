@@ -46,7 +46,7 @@
       "id": "envName",
       "type": "promptString",
       "description": "Enter the name of the Conda environment",
-      "default": "myenv"
+      "default": "project_name"
     }
   ]
 }
