@@ -11,8 +11,7 @@
         "--file",
         "environment.yml"
       ],
-      "problemMatcher": [],
-      "detail": "Creates a new Conda environment using the environment.yml file."
+      "problemMatcher": []
     },
     {
       "label": "Activate Conda Environment",
@@ -23,8 +22,7 @@
         "-Command",
         "conda activate ${input:envName}"
       ],
-      "problemMatcher": [],
-      "detail": "Activates the specified Conda environment persistently in the terminal."
+      "problemMatcher": []
     },
     {
       "label": "Update Conda Environment from environment.yml",
@@ -37,8 +35,7 @@
         "environment.yml",
         "--prune"
       ],
-      "problemMatcher": [],
-      "detail": "Updates the Conda environment to match the environment.yml file, removing unused dependencies."
+      "problemMatcher": []
     },
     {
       "label": "Initialize and Push to GitHub",
