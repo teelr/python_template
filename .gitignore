@@ -2,6 +2,9 @@
 #environment.yml
 *.conda
 
+#git stuff
+*.git
+
 # VSCode settings
 .vscode/
 
