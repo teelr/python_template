@@ -1,0 +1,38 @@
+name: myenv  # Name of your Conda environment
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Specify Python version
+  - python=3.10
+
+  # Version control
+  - git
+  - git-lfs
+
+  # Core development tools
+  - black
+  - ruff
+  - pytest
+
+  # Data manipulation and visualization
+  - pandas
+  - numpy
+  - matplotlib
+
+  # Utilities and web scraping
+  - requests
+  - beautifulsoup4
+
+  # Web development tools (choose one if not using both)
+  - flask
+  - fastapi
+
+  # Database interaction
+  - sqlalchemy
+  - psycopg2
+
+  # Machine learning libraries
+  - scikit-learn
+  - tensorflow=2.10  # Example specific version
+  - pytorch
